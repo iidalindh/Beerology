@@ -1,0 +1,645 @@
+/******* Importera alla scss filer.**********/
+.allBeersHeader {
+  background-image: url("../Pictures/rhett-wesley-beerBottles-unsplash.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 20vh; }
+  @media screen and (min-width: 768px) {
+    .allBeersHeader {
+      height: 40vh; } }
+  .allBeersHeader .allBeersText {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 45px;
+    text-transform: uppercase; }
+
+#allBeersContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  #allBeersContainer .individualBeerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 100%;
+    max-width: 43%;
+    padding: 20px 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(127, 127, 127, 0.1);
+    margin: 10px; }
+    @media screen and (min-width: 768px) {
+      #allBeersContainer .individualBeerContainer {
+        max-width: 22%; } }
+    #allBeersContainer .individualBeerContainer img {
+      width: 100%; }
+      @media screen and (min-width: 768px) {
+        #allBeersContainer .individualBeerContainer img {
+          width: 70%; } }
+      #allBeersContainer .individualBeerContainer img:hover, #allBeersContainer .individualBeerContainer img:active {
+        cursor: pointer;
+        opacity: 0.8; }
+    #allBeersContainer .individualBeerContainer p:first-of-type {
+      padding-bottom: 10px;
+      font-size: 14px;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        #allBeersContainer .individualBeerContainer p:first-of-type {
+          font-size: 20px;
+          padding-bottom: 20px; } }
+    #allBeersContainer .individualBeerContainer h3 {
+      font-size: 14px;
+      padding: 2px 0;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        #allBeersContainer .individualBeerContainer h3 {
+          font-size: 25px; } }
+
+#addToCartBtn {
+  background-color: #f7d36e;
+  border: 1px solid #f5b301;
+  border-radius: 20px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 5px;
+  padding: 3px 25px; }
+  @media screen and (min-width: 768px) {
+    #addToCartBtn {
+      padding: 8px 25px; } }
+  #addToCartBtn:hover, #addToCartBtn:active {
+    opacity: 0.8;
+    font-weight: 600; }
+
+#cart {
+  border: 2px solid #111;
+  background-color: #f8efd6;
+  position: absolute;
+  min-height: 5rem;
+  top: 60px;
+  right: 20px;
+  width: 340px;
+  display: none;
+  z-index: 999;
+  flex-direction: column;
+  padding: 20px; }
+  #cart h3 {
+    text-align: center;
+    margin-bottom: 20px; }
+  #cart .cartCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 12px; }
+    #cart .cartCard img {
+      width: 60px; }
+    #cart .cartCard #cartProductName {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 25%; }
+    #cart .cartCard button {
+      background-color: #f7d36e;
+      border: 1px solid #f5b301;
+      border-radius: 20px;
+      color: #000;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      width: 15px;
+      border-radius: 2px; }
+    #cart .cartCard input {
+      width: 25px; }
+    #cart .cartCard .fa-trash {
+      cursor: pointer; }
+  #cart .totalprice {
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 30px;
+    height: 50px; }
+  #cart #checkoutBtn {
+    margin-top: 10px;
+    background-color: #f7d36e;
+    border: 1px solid #f5b301;
+    border-radius: 20px;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    width: 100%; }
+    #cart #checkoutBtn:hover, #cart #checkoutBtn:active {
+      opacity: 0.8;
+      font-weight: 600; }
+
+.checkoutPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative; }
+  .checkoutPage h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    order: -1;
+    position: absolute;
+    top: 30px; }
+  .checkoutPage .checkoutContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 20px; }
+    .checkoutPage .checkoutContainer .productContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      .checkoutPage .checkoutContainer .productContainer .productCard {
+        width: 95%;
+        margin-top: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(127, 127, 127, 0.1); }
+        @media screen and (min-width: 768px) {
+          .checkoutPage .checkoutContainer .productContainer .productCard {
+            width: 50%; }
+            .checkoutPage .checkoutContainer .productContainer .productCard .fa-trash {
+              margin-right: 15px; } }
+        .checkoutPage .checkoutContainer .productContainer .productCard .productCardImg {
+          width: 25%; }
+        .checkoutPage .checkoutContainer .productContainer .productCard p {
+          width: 25%; }
+        .checkoutPage .checkoutContainer .productContainer .productCard button {
+          background-color: #f7d36e;
+          border: 1px solid #f5b301;
+          border-radius: 20px;
+          color: #000;
+          text-align: center;
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: none;
+          width: 15px;
+          border-radius: 2px; }
+        .checkoutPage .checkoutContainer .productContainer .productCard input {
+          width: 25px; }
+        .checkoutPage .checkoutContainer .productContainer .productCard .fa-trash:hover {
+          cursor: pointer; }
+    .checkoutPage .checkoutContainer hr {
+      margin-top: 40px;
+      margin-bottom: 15px; }
+    .checkoutPage .checkoutContainer .checkoutTotal {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: bold; }
+      @media screen and (min-width: 768px) {
+        .checkoutPage .checkoutContainer .checkoutTotal {
+          width: 40%;
+          font-size: 20px; } }
+      .checkoutPage .checkoutContainer .checkoutTotal table {
+        width: 100%;
+        border-collapse: collapse; }
+        .checkoutPage .checkoutContainer .checkoutTotal table th {
+          font-weight: 400; }
+        .checkoutPage .checkoutContainer .checkoutTotal table td,
+        .checkoutPage .checkoutContainer .checkoutTotal table th {
+          text-align: center;
+          padding: 8px; }
+  .checkoutPage .formContainer {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; }
+    .checkoutPage .formContainer h3 {
+      margin-bottom: 50px; }
+    .checkoutPage .formContainer form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      @media screen and (min-width: 768px) {
+        .checkoutPage .formContainer form {
+          width: 40%; } }
+      .checkoutPage .formContainer form .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px; }
+        .checkoutPage .formContainer form .inputContainer input {
+          width: 60%;
+          padding: 3px; }
+      .checkoutPage .formContainer form button {
+        background-color: #f7d36e;
+        border: 1px solid #f5b301;
+        border-radius: 20px;
+        color: #000;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 20px;
+        padding: 8px 14px;
+        font-size: 16px; }
+        .checkoutPage .formContainer form button:hover, .checkoutPage .formContainer form button:active {
+          opacity: 0.8;
+          font-weight: 600; }
+        @media screen and (min-width: 768px) {
+          .checkoutPage .formContainer form button {
+            font-size: 16px; } }
+
+.footerSection {
+  background-color: #f7d36e;
+  margin-top: auto;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .footerSection {
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 100px; } }
+  .footerSection .footerLogo {
+    text-align: center;
+    padding-top: 10px; }
+    @media screen and (min-width: 768px) {
+      .footerSection .footerLogo {
+        flex: 1;
+        padding-top: 0; } }
+    .footerSection .footerLogo img {
+      width: 100px; }
+  .footerSection .socialIcons {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px; }
+    @media screen and (min-width: 768px) {
+      .footerSection .socialIcons {
+        flex: 1;
+        font-size: 20px; } }
+    .footerSection .socialIcons .fa {
+      margin-left: 5px;
+      color: #000; }
+      .footerSection .socialIcons .fa:hover {
+        cursor: pointer;
+        opacity: 0.7; }
+  .footerSection .contactFooter {
+    text-align: center;
+    line-height: 1.2em;
+    padding-bottom: 10px; }
+    @media screen and (min-width: 768px) {
+      .footerSection .contactFooter {
+        flex: 1;
+        font-size: 16px; } }
+    .footerSection .contactFooter a {
+      color: #000;
+      font-size: 12px;
+      text-decoration: none; }
+      .footerSection .contactFooter a:hover {
+        cursor: pointer;
+        opacity: 0.7; }
+    .footerSection .contactFooter p {
+      font-size: 12px; }
+
+.navbar {
+  height: 80px;
+  background-color: #f7d36e;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  /*menu button*/
+  /*menu button*/ }
+  .navbar .shoppingCart {
+    position: relative;
+    right: 20px;
+    color: #000; }
+  .navbar .menu-btn {
+    position: relative;
+    left: 20px;
+    display: flex;
+    flex-direction: column; }
+    .navbar .menu-btn > span {
+      display: block;
+      margin: 2px;
+      height: 4px;
+      width: 28px;
+      border-radius: 10px;
+      background-color: #000;
+      transition: transform 0.4s ease-in-out, opacity 0.4s; }
+    .navbar .menu-btn:hover {
+      cursor: pointer; }
+    .navbar .menu-btn.active span:nth-child(1) {
+      transform-origin: center center;
+      transform: rotate(135deg) translate(6px, -2px); }
+    .navbar .menu-btn.active span:nth-child(2) {
+      transform: translateX(10px);
+      opacity: 0; }
+    .navbar .menu-btn.active span:nth-child(3) {
+      transform-origin: center center;
+      transform: rotate(-135deg) translate(9px, 6px); }
+  .navbar .shoppingCart {
+    position: relative;
+    right: 20px;
+    color: #000; }
+    .navbar .shoppingCart .fa-shopping-cart {
+      font-size: 1.2em; }
+      .navbar .shoppingCart .fa-shopping-cart:hover {
+        cursor: pointer; }
+    .navbar .shoppingCart span {
+      font-size: 1em;
+      margin-left: 5px; }
+
+.menu-panel {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  padding: 30px 0 10px 0;
+  background-color: rgba(254, 208, 83, 0.7);
+  transition: all 0.2s ease;
+  list-style-type: none;
+  display: none; }
+  .menu-panel li {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px; }
+    .menu-panel li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600; }
+      .menu-panel li a:hover, .menu-panel li a:active {
+        color: #fff; }
+
+.expand {
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .wrapper #productImageContainer {
+      width: 50%; }
+    .wrapper #productInformationContainer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      margin: auto; } }
+
+.wrapper #productInformationContainer {
+  margin: 50px 0px; }
+
+#productImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; }
+  #productImageContainer img {
+    width: 80%;
+    height: 80%; }
+    @media screen and (min-width: 768px) {
+      #productImageContainer img {
+        width: 70%;
+        height: 75%; } }
+
+#productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    #productInfo {
+      align-items: flex-start; } }
+  #productInfo h3 {
+    font-size: 25px;
+    font-weight: normal; }
+    @media screen and (min-width: 768px) {
+      #productInfo h3 {
+        font-size: 40px; } }
+  #productInfo p:first-of-type {
+    padding-bottom: 20px; }
+  #productInfo p {
+    font-size: 18px; }
+    @media screen and (min-width: 768px) {
+      #productInfo p {
+        font-size: 22px; } }
+
+hr {
+  border-top: 1px solid #b8b4b4;
+  width: 90%;
+  margin: 20px; }
+  @media screen and (min-width: 768px) {
+    hr {
+      margin: 20px 0px;
+      width: 80%; } }
+
+#addToCartDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10%; }
+  @media screen and (min-width: 768px) {
+    #addToCartDiv {
+      margin: 0;
+      width: 80%; }
+      #addToCartDiv label {
+        font-size: 18px; } }
+  #addToCartDiv div input {
+    width: 15%;
+    margin: 10px; }
+  #addToCartDiv div .increaseAndDecrease {
+    background-color: #f7d36e;
+    border: 1px solid #f5b301;
+    border-radius: 20px;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 2px;
+    width: 10%;
+    font-size: 14px;
+    margin-bottom: 20px; }
+  #addToCartDiv .addToCartButton {
+    background-color: #f7d36e;
+    border: 1px solid #f5b301;
+    border-radius: 20px;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    width: 90%;
+    font-size: 14px; }
+    @media screen and (min-width: 768px) {
+      #addToCartDiv .addToCartButton {
+        width: 100%;
+        font-size: 16px; } }
+
+#infoTable {
+  margin: 20px;
+  display: flex;
+  justify-content: center; }
+  @media screen and (min-width: 768px) {
+    #infoTable {
+      margin: 20px 0px 10px 0px;
+      width: 80%; } }
+  #infoTable table {
+    border-collapse: collapse;
+    width: 100%; }
+    #infoTable table td,
+    #infoTable table th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px; }
+
+#aboutBeer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px; }
+  #aboutBeer h1 {
+    font-size: 25px;
+    padding-bottom: 15px; }
+  #aboutBeer p {
+    line-height: 25px; }
+  @media screen and (min-width: 768px) {
+    #aboutBeer {
+      margin: 50px 0px 0px 0px;
+      width: 80%; } }
+
+.headerContent {
+  background-image: url("../Pictures/beerology-startsida.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; }
+  .headerContent .headerText {
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    text-align: center; }
+    .headerContent .headerText h1 {
+      padding-bottom: 10px; }
+      @media screen and (min-width: 768px) {
+        .headerContent .headerText h1 {
+          font-size: 100px; } }
+    .headerContent .headerText p {
+      padding-bottom: 200px; }
+  .headerContent .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 270px; }
+    .headerContent .btn-container .button {
+      background-color: #f7d36e;
+      border: 1px solid #f5b301;
+      border-radius: 20px;
+      color: #000;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 15px 32px;
+      font-size: 18px;
+      margin: 4px 2px; }
+      .headerContent .btn-container .button:hover, .headerContent .btn-container .button:active {
+        opacity: 0.8; }
+
+.orderPayedHeader {
+  background-image: url("../Pictures/beerology-order.jpeg");
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; }
+  .orderPayedHeader .orderPayedText {
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    line-height: 2em; }
+    .orderPayedHeader .orderPayedText h3 {
+      font-size: 30px; }
+    .orderPayedHeader .orderPayedText p {
+      font-size: 20px;
+      font-weight: 600; }
+  .orderPayedHeader div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 250px; }
+    .orderPayedHeader div .button {
+      background-color: #f7d36e;
+      border: 1px solid #f5b301;
+      border-radius: 20px;
+      color: #000;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 32px;
+      font-size: 18px;
+      margin: 4px 2px; }
+      .orderPayedHeader div .button:hover, .orderPayedHeader div .button:active {
+        opacity: 0.8; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace; }

@@ -1,0 +1,49 @@
+.headerContent {
+  background-image: url("../Pictures/beerology-startsida.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  .headerText {
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @include center;
+    color: $hero-font-color;
+    font-size: 30px;
+    text-align: center;
+
+    h1 {
+      padding-bottom: 10px;
+      @include desktops {
+        font-size: 100px;
+      }
+    }
+    p {
+      padding-bottom: 200px;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    @include center;
+    position: relative;
+    bottom: 270px;
+
+    .button {
+      @include buttons;
+      font-weight: 600;
+      padding: 15px 32px;
+      font-size: 18px;
+      margin: 4px 2px;
+      &:hover,
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

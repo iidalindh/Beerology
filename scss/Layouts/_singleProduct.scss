@@ -1,0 +1,165 @@
+.wrapper {
+  @include desktops {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    #productImageContainer {
+      width: 50%;
+    }
+    #productInformationContainer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      margin: auto;
+    }
+  }
+
+  #productInformationContainer {
+    margin: 50px 0px;
+  }
+}
+
+#productImageContainer {
+  display: flex;
+  flex-direction: column;
+  @include center;
+  margin-top: 20px;
+  img {
+    width: 80%;
+    height: 80%;
+
+    @include desktops {
+      width: 70%;
+      height: 75%;
+    }
+  }
+}
+
+#productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include desktops {
+    align-items: flex-start;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: normal;
+
+    @include desktops {
+      font-size: 40px;
+    }
+  }
+
+  p:first-of-type {
+    padding-bottom: $gutter-default;
+  }
+
+  p {
+    font-size: 18px;
+    @include desktops {
+      font-size: 22px;
+    }
+  }
+}
+
+hr {
+  border-top: 1px solid #b8b4b4;
+  width: 90%;
+  margin: 20px;
+  @include desktops {
+    margin: 20px 0px;
+    width: 80%;
+  }
+}
+
+#addToCartDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10%;
+
+  @include desktops {
+    margin: 0;
+    width: 80%;
+    label {
+      font-size: 18px;
+    }
+  }
+
+  div {
+    input {
+      width: 15%;
+      margin: 10px;
+    }
+
+    .increaseAndDecrease {
+      @include buttons;
+      border-radius: 0;
+      padding: 2px;
+      width: 10%;
+      font-size: 14px;
+      margin-bottom: $gutter-default;
+    }
+  }
+
+  .addToCartButton {
+    @include buttons;
+    padding: 5px;
+    width: 90%;
+    font-size: 14px;
+
+    @include desktops {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}
+
+#infoTable {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+
+  @include desktops {
+    margin: 20px 0px 10px 0px;
+    width: 80%;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+  }
+}
+
+#aboutBeer {
+  display: flex;
+  flex-direction: column;
+  @include center;
+  margin: 30px;
+
+  h1 {
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
+
+  p {
+    line-height: 25px;
+  }
+
+  @include desktops {
+    margin: 50px 0px 0px 0px;
+    width: 80%;
+  }
+}

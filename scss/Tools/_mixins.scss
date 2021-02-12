@@ -1,0 +1,26 @@
+// Alla mixins här.
+@import "variables";
+
+//Buttons
+@mixin buttons {
+  background-color: $background-color;
+  border: 1px solid #f5b301;
+  border-radius: 20px;
+  color: $main-font-color;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
+
+// Media query for tablets and desktops.
+@mixin desktops {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}

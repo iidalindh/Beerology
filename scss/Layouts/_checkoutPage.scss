@@ -1,0 +1,152 @@
+.checkoutPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    order: -1;
+    position: absolute;
+    top: 30px;
+  }
+
+  .checkoutContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+
+    .productContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .productCard {
+        width: 95%;
+        margin-top: 15px;
+        padding: $gutter-sm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1),
+          0 0 10px rgba(127, 127, 127, 0.1);
+
+        @include desktops {
+          width: 50%;
+          .fa-trash {
+            margin-right: 15px;
+          }
+        }
+        .productCardImg {
+          width: 25%;
+        }
+
+        p {
+          width: 25%;
+        }
+
+        button {
+          @include buttons;
+          width: 15px;
+          border-radius: 2px;
+        }
+
+        input {
+          width: 25px;
+        }
+
+        .fa-trash:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    hr {
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    .checkoutTotal {
+      width: 100%;
+      margin-top: $margin-med;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: bold;
+
+      @include desktops {
+        width: 40%;
+        font-size: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        th {
+          font-weight: 400;
+        }
+        td,
+        th {
+          text-align: center;
+          padding: 8px;
+        }
+      }
+    }
+  }
+  .formContainer {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    @include center;
+    padding: 10px;
+
+    h3 {
+      margin-bottom: $gutter-large;
+    }
+
+    form {
+      width: 100%;
+      @include desktops {
+        width: 40%;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        input {
+          width: 60%;
+          padding: 3px;
+        }
+      }
+
+      button {
+        @include buttons;
+        margin-top: 20px;
+        padding: 8px 14px;
+        font-size: 16px;
+        &:hover,
+        &:active {
+          opacity: 0.8;
+          font-weight: 600;
+        }
+
+        @include desktops {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

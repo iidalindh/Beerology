@@ -1,0 +1,90 @@
+@import "../Tools/mixins";
+
+.allBeersHeader {
+  background-image: url("../Pictures/rhett-wesley-beerBottles-unsplash.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 20vh;
+  @include desktops {
+    height: 40vh;
+  }
+
+  .allBeersText {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @include center;
+    color: $hero-font-color;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+}
+
+#allBeersContainer {
+  display: flex;
+  flex-direction: row;
+  @include center;
+  flex-wrap: wrap;
+
+  .individualBeerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 100%;
+    max-width: 43%;
+    @include desktops {
+      max-width: 22%;
+    }
+    padding: $gutter-default $gutter-sm;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(127, 127, 127, 0.1);
+    margin: $margin-med;
+    img {
+      width: 100%;
+      @include desktops {
+        width: 70%;
+      }
+      &:hover,
+      &:active {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+
+    p:first-of-type {
+      padding-bottom: $gutter-sm;
+      font-size: 14px;
+      @include desktops {
+        font-size: 20px;
+        padding-bottom: $gutter-default;
+      }
+
+      text-align: center;
+    }
+    h3 {
+      font-size: 14px;
+      padding: 2px 0;
+      text-align: center;
+      @include desktops {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+#addToCartBtn {
+  @include buttons;
+  margin-top: 5px;
+  padding: 3px 25px;
+  @include desktops {
+    padding: 8px 25px;
+  }
+  &:hover,
+  &:active {
+    opacity: 0.8;
+    font-weight: 600;
+  }
+}
